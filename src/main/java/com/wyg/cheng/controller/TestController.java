@@ -1,14 +1,15 @@
 package com.wyg.cheng.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-@RestController
-@RequestMapping("/hello")
+@Controller
 public class TestController {
 
-    @RequestMapping("/cheng")
-    public String index(){
-        return "马琪吃大屁！！！！！";
+    @GetMapping("/")
+    public String index( Model model){
+        return "index";
     }
 }
